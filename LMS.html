@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJ_LMSPage</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #NavDiv {
+            background-color: aliceblue;
+            height: 70px;
+            width: auto;
+
+        }
+
+        #mujlogo {
+            height: 50px;
+            width: 200px;
+            margin-top: 10px;
+            margin-left: 250px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            gap: 300px;
+        }
+
+        #menu {
+            height: 30px;
+            width: 30px;
+        }
+
+        #LMS-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Space between icons */
+            margin-left: 230px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #maintabs {
+            background-color: #f9f9f9;
+            height: 50px;
+            width: auto;
+            position: relative;
+        }
+
+        #tabs {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 240px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+        }
+
+        #container {
+            height: 1900px;
+            width: 70vw;
+            background-color: beige;
+            margin-left: 240px;
+            position: relative;
+        }
+
+        #poster-container {
+            position: relative;
+        }
+
+        #poster {
+            height: 200px;
+            width: 70vw;
+        }
+
+        #poster_text {
+            position: absolute;
+            top: 70%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #mycourses {
+            height: 1000px;
+            width: 45vw;
+            background-color: white;
+            margin-top: 30px;
+        }
+
+        #Semester_BCA {
+            background-color: white;
+            height: 100px;
+            width: 692px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #one {
+            height: 250px;
+            width: 200px;
+            background-color: beige;
+            border-radius: 5px;
+
+        }
+
+        #row1 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        #row1:hover {
+            transform: scale(1.1);
+            /* Enlarge icons on hover */
+            transition: 0.3s ease;
+        }
+
+        #two {
+            height: 250px;
+            width: 200px;
+            background-color: beige;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #row2 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        #row2:hover {
+            transform: scale(1.1);
+            /* Enlarge icons on hover */
+            transition: 0.3s ease;
+        }
+
+        #three {
+            height: 250px;
+            width: 200px;
+            background-color: beige;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #row3 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        #row3:hover {
+            transform: scale(1.1);
+            /* Enlarge icons on hover */
+            transition: 0.3s ease;
+        }
+
+        #oneimg {
+            height: 80px;
+            width: auto;
+        }
+
+        #twoimg {
+            height: 80px;
+            width: auto;
+        }
+
+        #threeimg {
+            height: 80px;
+            width: auto;
+        }
+
+        #end {
+            margin-left: 20px;
+            margin-top: 40px;
+            font-weight: bold;
+            color: lightseagreen;
+        }
+
+        #end:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .font {
+            margin-left: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .BCA {
+            margin-left: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #poto {
+            height: 40px;
+            width: 40px;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        #important {
+            height: 500px;
+            width: 500px;
+            background-color: white;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="NavDiv">
+        <nav id="navbar">
+            <img src="MUJLOGOO.png" id="mujlogo">
+            <div id="LMS-icons">
+                <div class="dropdown">
+                    <span>
+                        <img src="menu.png" id="menu"></span>
+                    <div class="dropdown-content">
+                        <p>Select a course..</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>
+                        <img src="chatting.png" id="menu"></span>
+                    <div class="dropdown-content">
+                        <p>Subscription alert</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>
+                        <img src="notification.png" id="menu"></span>
+                    <div class="dropdown-content">
+                        <p>Updates alerts</p>
+                    </div>
+                </div>
+                <img src="lataimg.jpeg" id="menu">
+                <font>Lata Kumari</font>
+                <div class="dropdown">
+                    <span>
+                        <img src="settings.png" id="menu"></span>
+                    <div class="dropdown-content">
+                        <p>Admin Tools</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <div id="maintabs">
+        <div id="tabs">
+            <a href="###">
+                <font style="color:black;">Announcements</font>
+            </a>
+            <a href="###">
+                <font style="color:black;">Calendar</font>
+            </a>
+            <a href="###">
+                <font style="color:black;">Help</font>
+            </a>
+            <a href="###">
+                <font style="color:black;">E-Library</font>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div id="container">
+        <div id="poster-container">
+            <img src="LMSimg.jpg" id="poster">
+            <div id="poster_text">Welcome Lata Kumari</div>
+        </div>
+        <div id="mycourses">
+            <div id="Semester_BCA">
+                <p>All</p>
+                <p>BCA_Sem1</p>
+                <p>BCA_Sem2</p>
+                <p>BCA_Sem3</p>
+                <p>BCA_Sem4</p>
+                <p>BCA_Sem5</p>
+                <p>Project</p>
+                <p>Skill Assessment</p>
+            </div>
+            <div id="row1">
+                <div id="one">
+                    <img src="a.jpeg" id="oneimg">
+                    <p class="font">E-Commerce</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+                <div id="one">
+                    <img src="b.jpeg" id="oneimg">
+                    <p class="font">Python Programming-<br>Practical</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+                <div id="one">
+                    <img src="c.jpeg" id="oneimg">
+                    <p class="font">Web Design-Practical</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+            </div>
+            <div id="row2">
+                <div id="two">
+                    <img src="d.jpeg" id="twoimg">
+                    <p class="font">Visual Programming-<br>Practical</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+                <div id="two">
+                    <img src="e.jpeg" id="twoimg">
+                    <p class="font">Python Programming</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+                <div id="two">
+                    <img src="f.jpeg" id="twoimg">
+                    <p class="font">Software Enginnering</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+            </div>
+            <div id="row3">
+                <div id="three">
+                    <img src="g.jpeg" id="threeimg">
+                    <p class="font">Visual Programming</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+                <div id="three">
+                    <img src="h.jpeg" id="threeimg">
+                    <p class="font">Web Design</p>
+                    <p class="BCA">BCA_Sem5</p>
+                    <img src="text.png" id="poto">
+                </div>
+            </div>
+            <p id="end">View All Courses (8)</p>
+        </div>
+        <div id="important">
+
+        </div>
+    </div>
+</body>
+
+</html>

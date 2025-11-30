@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJ_LibraryPage</title>
+    <style>
+        /*Navbar*/
+        #MUJ-LOGO {
+            height: 50px;
+            width: 200px;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+        #navbar {
+            height: 12vh;
+            background-color: ghostwhite;
+            display: flex;
+            justify-content: space-between;
+            /* Space between Textcontainer and LanguageGroup */
+            align-items: center;
+            /* Center content vertically */
+            padding: 0 10px;
+            /* Add some padding for spacing */
+        }
+
+        #tabs {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+        }
+
+        .fontcolor {
+            text-decoration: none;
+            color: black;
+        }
+
+        .fontcolor:hover {
+            color: orangered
+        }
+
+        font.fontcolor:link {
+            color: #ff0000;
+        }
+
+        font.fontcolor:visited {
+            color: #0000ff;
+        }
+
+        font.fontcolor:hover {
+            font-size: 150%;
+        }
+
+        #notification-icon {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        #Libraryimg {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #BooksList {
+            height: 110vh;
+            width: 80vw;
+            margin-left: 140px;
+        }
+
+        /*book lists*/
+        #listimg {
+            height: 20px;
+            width: 20px;
+        }
+
+        #one {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #Two {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Three {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Four {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Five {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Six {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Seven {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Eight {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Nine {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Ten {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Eleven {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Tweleve {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Thirteen {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Fourteen {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Fifteen {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #Sixteen {
+            height: 30px;
+            width: auto;
+            background-color: gainsboro;
+            color: black;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #MUJspace {
+            height: 200px;
+            width: auto;
+            background-color: gainsboro;
+            align-content: center;
+        }
+
+        #para {
+            height: 300px;
+            width: auto;
+            background-color: ghostwhite;
+            align-items: center;
+            text-align: center;
+        }
+
+        /*Email Forms */
+        #Forms {
+            height: 600px;
+            width: auto;
+            background-color: gainsboro;
+            display: flex;
+            gap: 6px;
+        }
+
+        #email {
+            height: 500px;
+            width: 600px;
+            background-color: ghostwhite;
+            margin-top: 50px;
+            margin-left: 80px;
+            border-radius: 5px;
+        }
+
+        #map {
+            height: 500px;
+            width: 600px;
+            background-color: ghostwhite;
+            margin-top: 50px;
+            margin-left: 80px;
+            border-radius: 5px;
+        }
+
+        #a {
+            margin-left: 60px;
+        }
+
+        #b {
+            margin-left: 60px;
+        }
+
+        #c {
+            margin-left: 60px;
+
+        }
+
+        #d {
+            margin-left: 60px;
+        }
+
+        #e {
+            margin-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #f {
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+
+        #g {
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+
+        #h {
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+
+        #i {
+            margin-left: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #j {
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+
+        #k {
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+
+        #btn-L {
+            height: 30px;
+            width: 150px;
+            background-color: maroon;
+            color: white;
+            border-radius: 6px;
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+
+        /* Address mail phone location*/
+        #Address {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        #location {
+            height: 230px;
+            width: 400px;
+            background-color: gainsboro;
+            margin-left: 100px;
+            margin-top: 90px;
+        }
+
+        #mail {
+            height: 230px;
+            width: 400px;
+            background-color: gainsboro;
+            margin-left: 100px;
+            margin-top: 90px;
+        }
+
+        #phone {
+            height: 230px;
+            width: 400px;
+            background-color: gainsboro;
+            margin-left: 100px;
+            margin-top: 90px;
+        }
+
+        #mapimg {
+            height: 80px;
+            width: 80px;
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+
+        #communicationimg {
+            height: 80px;
+            width: 80px;
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+
+        #phoneimg {
+            height: 80px;
+            width: 80px;
+            margin-left: 140px;
+            margin-top: 40px;
+        }
+
+        #para1 {
+            margin-left: 110px;
+        }
+
+        #para2 {
+            margin-left: 60px;
+        }
+
+        #para3 {
+            margin-left: 110px;
+        }
+
+        #Blank {
+            background-color: black;
+            color: white;
+        }
+
+        #last {
+            margin-left: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. NAVBAR  -->
+    <div id="Container">
+        <nav id="navbar">
+            <div> <img src="muj-logoo.png" id="MUJ-LOGO"></div>
+            <div id="tabs">
+                <a href="index.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Home</b></font>
+                </a>
+                <a href="Courses.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Resources</b></font>
+                </a>
+                <a href="Library.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>About Us</b></font>
+                </a>
+                <a href="Announcement.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>User Manual</b></font>
+                </a>
+                <a href="Payments.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Contact Us</b></font>
+                </a>
+                <a href="Refer_Earn.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Login</b></font>
+                </a>
+                <a href="ServiceRequest.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Signup</b></font>
+                </a>
+            </div>
+        </nav>
+        <div id="Libraryimg">
+            <img src="Libraryimg.png" id="Libraryimg">
+        </div>
+        <h1 align="center"><u>RESOURCES</u></h1>
+        <div id="BooksList">
+            <div id="one">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">E-Newspapers & Magazines</font>
+            </div>
+            <div id="Two">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">E-Journals</font>
+            </div>
+            <div id="Three">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">E-Books</font>
+            </div>
+            <div id="Four">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">E-Databases</font>
+            </div>
+            <div id="Five">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Business E-cases</font>
+            </div>
+            <div id="Six">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Research Database</font>
+            </div>
+            <div id="Seven">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Research Writing Tool</font>
+            </div>
+            <div id="Eight">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Reference Management Tools</font>
+            </div>
+            <div id="Nine">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Research Metrics and Visibility</font>
+            </div>
+            <div id="Ten">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Subject-wise e-contents</font>
+            </div>
+            <div id="Eleven">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Online Courses</font>
+            </div>
+            <div id="Tweleve">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Virtual Labs</font>
+            </div>
+            <div id="Thirteen">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">TV Channels</font>
+            </div>
+            <div id="Fourteen">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Theses and Dissertations</font>
+            </div>
+            <div id="Fifteen">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">MUJ Book Search</font>
+            </div>
+            <div id="Sixteen">
+                <img src="success.png" id="listimg">
+                <font style="font-size: 15px; font-weight:bold;">Question Papers</font>
+            </div>
+
+        </div>
+        <div id="MUJspace">
+            <h1 align="center">Manipal University Jaipur</h1>
+        </div>
+        <div id="para">
+            <p><br><br><br>Manipal University Jaipur Libraries are the hub for academic information services
+                in the
+                university and
+                serves as a major learning and resource centres. The Manipal University<br> Libraries now holds nearly
+                75000
+                books; about 2.30 lakh e-books; 350 print periodicals including 250 national and 100 international
+                journals, 1000 back volumes of journals, 325 Ph.D<br> theses; and about 3000 CD/DVD-ROMs. The MUJ
+                Libraries
+                provides access to 32960 e-journals covering IEL Online, Springer Journals, EBSCO Business Source Elite,
+                JGate, JSTOR,<br> Manupatra, Lexis India, Supreme Court Cases, Corporate Law Advisor, and CMIE
+                Database.The
+                MUJ libraries have seating capacity of 700.<br><br>
+
+                The Central Library has established an Institutional Repository using Dspace: A Digital Library
+                Software. The Central Library provides off campus access to all its subscribed contents to<br> the
+                students,
+                faculty, and research scholars through username and password using Remotlog software.<br><br>
+
+                The Central Library extends research support to the researchers and faculty by providing Turnitin: A
+                Plagiarism checking software and QuillBot: Research Writing Tool.The Central<br> Library is a Member of
+                DELNET, INFLIBNET, e-ShodhSindhu, ShodhGanga, British Council Library, Current Science, Indian Academy
+                of Social Sciences, and American Library.</p>
+        </div>
+        <h1 align="center">GET IN TOUCH WITH US</h1>
+        <p align="center">Still have Questions? Contact Us using the Form below.</p>
+        <!-- Email Forms -->
+        <div id="Forms">
+            <div id="email">
+                <form>
+                    <h1 id="a">Send us an Email</h1>
+                    <label
+                        id="b"><b>NAME*</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label
+                        id="c"><b>EMAIL*</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label id="d"><b>PHONE</b></label><br>
+                    <input type="text" style="height:25px; width:100px;" id="e">
+                    <input type="text" style="height:25px; width:100px;" id="f">
+                    <input type="text" style="height:25px; width:100px;" id="g">
+                    <br>
+                    <label><b id="h">SUBJECT</b></label><br>
+                    <input type="text" style="height:25px; width:440px;" id="i">
+                    <br>
+                    <label><b id="j">MESSAGE</b></label><br>
+                    <textarea id="k" rows="10" cols="60"></textarea>
+                    <button id="btn-L">SEND MESSAGE</button>
+                </form>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8772858041957!2d75.56036338051385!3d26.843855116580624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee9b%3A0x1b8d67402d4eb863!2sManipal%20University%20Jaipur!5e0!3m2!1sen!2sin!4v1735146480582!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="Address">
+            <div id="location">
+                <img src="map.png" id="mapimg"><br>
+                <b id="para1">Library Address</b><br>
+                <font id="para2">Central Library, Manipal University</font><br>
+                <font id="para2">Jaipur, Jaipur-Ajmer Express Highway,</font><br>
+                <font id="para2">Dehmi Kalan, Jaipur, Rajasthan 303007</font><br>
+            </div>
+            <div id="mail">
+                <img src="communication.png" id="communicationimg"><br>
+                <b id="para1">Email ID</b><br>
+                <p id="para2">digitallibrary@jaipur.manipal.edu</p>
+            </div>
+            <div id="phone">
+                <img src="phone-call (2).png" id="mapimg"><br>
+                <b id="para1">Contact No.</b><br>
+                <p id="para3">9942557347</p>
+            </div>
+        </div>
+        <div id="Blank">
+            <h3 id="last">MANIPAL UNIVERSITY JAIPUR</h3>
+            <h5 id="last">Off Campus Remote Access to e-Resources</h5>
+            <hr>
+            <h5 id="last">Connect with Library:</h5>
+            <h5 id="last">Contact Person: Dr.K.S.Shivraj</h5>
+            <h5 id="last">Email Address: digitallibrary@jaipur.manipal.edu</h5>
+            <hr>
+            <h6 id="last"> iOS</h6>
+            <h6 id="last">Android</h6>
+        </div>
+    </div>
+</body>
+
+</html>

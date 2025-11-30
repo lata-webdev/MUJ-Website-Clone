@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJ_MARKSPage</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*Navbar*/
+        #MUJ-LOGO {
+            height: 50px;
+            width: 200px;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+        #navbar {
+            height: 12vh;
+            background-color: ghostwhite;
+            display: flex;
+            justify-content: space-between;
+            /* Space between Textcontainer and LanguageGroup */
+            align-items: center;
+            /* Center content vertically */
+            padding: 0 10px;
+            /* Add some padding for spacing */
+        }
+
+        #tabs {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+        }
+
+        .fontcolor {
+            text-decoration: none;
+            color: black;
+        }
+
+        .fontcolor:hover {
+            color: orangered
+        }
+
+        font.fontcolor:link {
+            color: #ff0000;
+        }
+
+        font.fontcolor:visited {
+            color: #0000ff;
+        }
+
+        font.fontcolor:hover {
+            font-size: 150%;
+        }
+
+        #notification-icon {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        #profile-icon {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        #icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 40px;
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+
+        /* Footer */
+        #Foot-logo {
+            height: 180px;
+            width: 300px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            /* Align the content vertically */
+        }
+
+        #Foot-logo img {
+            height: 100%;
+            /* Scale the image properly */
+            width: auto;
+        }
+
+        #footer {
+            height: auto;
+            width: 1500px;
+            background-color: black;
+            display: flex;
+            justify-content: flex-start;
+            /* Space between logo and tabs */
+            align-items: center;
+            /* Align items vertically in the center */
+            padding: 10px 20px;
+            /* Add some padding for spacing */
+        }
+
+        #foottabs {
+            display: flex;
+            align-items: center;
+            /* Center the links vertically */
+            gap: 30px;
+            /* Add spacing between links */
+            margin-left: 0px;
+        }
+
+        #foot {
+            margin-top: 30px;
+        }
+
+        #foottabs a {
+            text-decoration: none;
+            /* Remove underline from links */
+            color: white;
+            /* Text color */
+            font-size: 16px;
+            /* Font size for better readability */
+            font-weight: bold;
+        }
+
+        #foottabs a:hover {
+            color: #007BFF;
+            text-decoration: underline;
+            /* Change color on hover */
+        }
+
+        #MediaLinks {
+            display: flex;
+            justify-content: center;
+            /* Center align media links horizontally */
+            align-items: center;
+            gap: 20px;
+            /* Space between social media icons */
+            margin-top: 10px;
+            flex-direction: row;
+            /* Align media links horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping for small screens */
+            justify-content: center;
+            /* Center align */
+        }
+
+        #MediaLinks a img {
+            height: 30px;
+            /* Set size for social media icons */
+            width: 30px;
+            cursor: pointer;
+        }
+
+        #MediaLinks a font {
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+
+        #MediaLinks a:hover img {
+            transform: scale(1.2);
+            /* Enlarge icons on hover */
+            transition: 0.3s ease;
+        }
+
+        #Mediainks font:hover {
+            color: #007BFF;
+            text-decoration: underline;
+            /* Change color on hover */
+        }
+
+        .contact {
+            font-size: 15px;
+            color: white;
+        }
+
+        #mail {
+            font-size: 15px;
+            color: orangered;
+            text-decoration: none;
+        }
+
+        #mail:hover {
+            text-decoration: underline;
+            /* Change color on hover */
+        }
+
+        #lastfoot {
+            height: 50px;
+            width: 150vw;
+            background-color: black;
+        }
+
+        #Marks {
+            height: 80vh;
+            width: auto;
+            background-color: beige;
+            text-align: center;
+            align-items: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. NAVBAR  -->
+    <div id="Container">
+        <nav id="navbar">
+            <div> <img src="muj-logoo.png" id="MUJ-LOGO"></div>
+            <div id="tabs">
+                <a href="index.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Home</b></font>
+                </a>
+                <a href="Courses.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Courses</b></font>
+                </a>
+                <a href="Library.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>E-Library</b></font>
+                </a>
+                <a href="Announcement.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Announcements</b></font>
+                </a>
+                <a href="Payments.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Payments</b></font>
+                </a>
+                <a href="Refer_Earn.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Refer & Earn</b></font>
+                </a>
+                <a href="ServiceRequest.html" class="fontcolor">
+                    <font class="fontcolor" size="4"><b>Service Request</b></font>
+                </a>
+            </div>
+            <div id="icons">
+                <div class="dropdown">
+                    <span> <img src="notification.png" id="notification-icon"></span>
+                    <div class="dropdown-content">
+                        <p>Notification</p>
+                    </div>
+                </div>
+                <div class="dropdown1">
+                    <span> <img src="account.png" id="profile-icon"></span>
+                    <div class="dropdown-content1">
+                        <p>Profile</p>
+                        <p>Log Out</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <div id="Marks">
+            <h1>MARKSHEET LOADING......</h1>
+        </div>
+        <!-- Footer  -->
+        <div id="foot">
+            <hr>
+            <footer id="footer">
+                <div id="Foot-logo"> <img src="footer-Logo.jpeg" id="Foot-logo"></div>
+
+                <div id="foottabs">
+                    <a href="###">
+                        <font><b>Manipal University Website</b></font>
+                    </a>
+                    <a href="###">
+                        <font><b>Proquest</b></font>
+                    </a>
+                    <a href="###">
+                        <font><b>Swayam Portal</b></font>
+                    </a>
+                    <a href="###">
+                        <font><b>National Digital Library</b></font>
+                    </a>
+                    <a href="###">
+                        <font><b>Blogs</b></font>
+                    </a>
+                    <a href="###">
+                        <font><b>Outlook</b></font>
+                    </a>
+                </div>
+                <br><br>
+                <!-- Media Links Section -->
+                <div id="MediaLinks">
+                    <a href="##">
+                        <font>Follow Us On</font>
+                    </a>
+                    <a href="###"><img src="facebook.png"></a>
+                    <a href="###"><img src="linkedin.png"></a>
+                    <a href="###"><img src="youtube.png"></a>
+                    <a href="###"><img src="instagram (1).png"></a>
+                    <font class="contact">Contact Us:</font><a href="###" id="mail">helpdesk@mujonline.edu.in </a>
+                    <font class="contact">TEL: +91 799-6600-444</font>
+                </div>
+            </footer>
+        </div>
+        <hr style="border: 2px solid orangered; width:150vw;">
+        <div id="lastfoot"></div>
+        <hr>
+    </div>
+</body>
+
+</html>
